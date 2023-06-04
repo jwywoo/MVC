@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-06-04T08:01:52" hostname="Wooyongui-MacBookAir.local" time="0.042">
+  <properties/>
+  <testcase name="[1] 1, +, 1, 2" classname="CalculatorTest" time="0.034"/>
+  <testcase name="[2] 1, -, 1, 0" classname="CalculatorTest" time="0.001"/>
+  <testcase name="[3] 1, *, 2, 2" classname="CalculatorTest" time="0.0"/>
+  <testcase name="[4] 4, /, 1, 4" classname="CalculatorTest" time="0.0"/>
+  <testcase name="Addition" classname="CalculatorTest" time="0.0"/>
+  <testcase name="Subtraction" classname="CalculatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
