@@ -3,10 +3,12 @@ package org.example;
 import java.util.List;
 
 public class GradeCalculator {
-    private final List<Course> courses;
+    private final Courses courses;
+
+
 
     public GradeCalculator(List<Course> courseList) {
-        this.courses = courseList;
+        this.courses = new Courses(courseList);
     }
 
     /**
@@ -14,16 +16,8 @@ public class GradeCalculator {
      * First Class Collections
      **/
     public double calculateGrade() {
-        double weightedGrades = 0;
-        int totalCredits = courses.stream()
-                .mapToInt(Course::getCredits)
-                .sum();
-        for (Course course : courses) {
-            weightedGrades += course.weightedGrade();
-            // weightedGrade += course.getGrade() * course.getCredits();
-            // totalCredits += course.getCredits();
-        }
-
+        double weightedGrades = courses.weightedGrades();
+        int totalCredits = courses.totalCredits();
         return weightedGrades / totalCredits;
     }
 }
