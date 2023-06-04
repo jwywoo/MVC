@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class CalculatorTest {
@@ -41,5 +42,13 @@ public class CalculatorTest {
                 arguments(1,"*",2,2),
                 arguments(4,"/",1,4)
         );
+    }
+
+    @DisplayName("Raise an error if user tried to divide it by 0")
+    @Test
+    void calculationExceptionTest() {
+        assertThatCode(() ->Calculator.calculate(10,"/",0))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Can't do zero division");
     }
 }
