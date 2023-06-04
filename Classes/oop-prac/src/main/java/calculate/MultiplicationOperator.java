@@ -1,3 +1,5 @@
+package calculate;
+
 public class MultiplicationOperator implements newArithmeticOperator {
     @Override
     public boolean supports(String operator) {

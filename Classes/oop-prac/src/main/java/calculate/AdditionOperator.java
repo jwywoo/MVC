@@ -1,4 +1,6 @@
-public class AdditionOperator implements  newArithmeticOperator{
+package calculate;
+
+public class AdditionOperator implements newArithmeticOperator {
 
     @Override
     public boolean supports(String operator) {

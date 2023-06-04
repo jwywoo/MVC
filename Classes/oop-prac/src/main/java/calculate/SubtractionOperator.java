@@ -1,3 +1,5 @@
+package calculate;
+
 public class SubtractionOperator implements newArithmeticOperator {
     @Override
     public boolean supports(String operator) {
