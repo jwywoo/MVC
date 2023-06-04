@@ -11,6 +11,10 @@ public class Course {
 
     }
 
+    public double weightedGrade() {
+        return this.getGrade()*this.credit;
+    }
+
     public double getGrade() {
         double grade = 0;
         switch (this.grade) {

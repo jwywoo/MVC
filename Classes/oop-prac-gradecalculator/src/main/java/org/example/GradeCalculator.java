@@ -14,15 +14,16 @@ public class GradeCalculator {
      * First Class Collections
      **/
     public double calculateGrade() {
-        double weightedGrade = 0;
+        double weightedGrades = 0;
         int totalCredits = courses.stream()
                 .mapToInt(Course::getCredits)
                 .sum();
         for (Course course : courses) {
-            weightedGrade = course.getGrade() * course.getCredits();
+            weightedGrades += course.weightedGrade();
+            // weightedGrade += course.getGrade() * course.getCredits();
             // totalCredits += course.getCredits();
         }
 
-        return weightedGrade / totalCredits;
+        return weightedGrades / totalCredits;
     }
 }
