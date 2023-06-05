@@ -18,6 +18,7 @@ public class GradeCalculatorTest {
         );
 
         // Calculate the grade
+        // calculatedGrade = (credits*grade)/(total credits)
         GradeCalculator gradeCalculator = new GradeCalculator(courseList);
         double calculatedGrade = gradeCalculator.calculateGrade();
 

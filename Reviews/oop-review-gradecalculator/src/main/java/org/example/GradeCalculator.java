@@ -3,14 +3,13 @@ package org.example;
 import java.util.List;
 
 public class GradeCalculator {
-    private final List<Course> courseList;
+    private final Courses courseList;
 
     public GradeCalculator(List<Course> courseList) {
-        this.courseList = courseList;
+        this.courseList = new Courses(courseList);
     }
 
     public double calculateGrade() {
-
-        return 4.5;
+        return courseList.getWeightedTotal()/courseList.getTotalCredits();
     }
 }
