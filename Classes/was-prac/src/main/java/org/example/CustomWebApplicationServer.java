@@ -34,9 +34,16 @@ public class CustomWebApplicationServer {
                     BufferedReader br = new BufferedReader(new InputStreamReader(in , StandardCharsets.UTF_8));
                     DataOutputStream dataOutputStream = new DataOutputStream(out);
 
-                    String line;
-                    while ((line = br.readLine()) != "") {
-                        System.out.println(line);
+                    HttpRequest httpRequest = new HttpRequest(br);
+
+                    if (httpRequest.isGetRequest() && httpRequest.matchPath("/calculator")) {
+                        QueryStrings queryStrings = httpRequest.getQueryStrings();
+
+                        int operand1 = queryStrings.getValue("operand1");
+                        String operator = queryStrings.getValue("operator");
+                        int operand2 = queryStrings.getValue("operand2");
+
+                        int result = Calculate.calculate(operand1, operator,operand2);
                     }
                 }
             }

@@ -26,6 +26,14 @@ public class RequestLine {
         }
     }
 
+    public boolean isGetRequest() {
+        return "GET".equals(this.method);
+    }
+
+    public boolean matchPath() {
+        return "/calculator".equals(this.urlPath);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
