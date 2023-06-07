@@ -28,6 +28,17 @@ public class UserDao {
         }
     }
 
+    public void create2(User user) throws SQLException {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        String sql = "INSERT INTO VALUES (?, ?, ?, ?)";
+        jdbcTemplate.executeUpdate(user, sql, pstmt -> {
+            pstmt.setString(1, user.getUserId());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setString(3, user.getName());
+            pstmt.setString(4, user.getEmail());
+        });
+    }
+
     public User findByUserId(String userId) throws SQLException {
         Connection con = null;
         PreparedStatement pstmt = null;
