@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.ReflectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-08T07:31:37" hostname="Wooyongui-MacBookAir.local" time="0.041">
+<testsuite name="org.example.ReflectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-08T07:50:16" hostname="Wooyongui-MacBookAir.local" time="0.015">
   <properties/>
-  <testcase name="controllerSCAN()" classname="org.example.ReflectionTest" time="0.041"/>
-  <system-out><![CDATA[16:31:37.543 [Test worker] DEBUG org.reflections.Reflections - going to scan these urls: [file:/Users/wooyongjeong/Backend-dev/MVC/Classes/mvc-practice/build/classes/java/main/, file:/Users/wooyongjeong/Backend-dev/MVC/Classes/mvc-practice/build/classes/java/test/]
-16:31:37.568 [Test worker] INFO org.reflections.Reflections - Reflections took 21 ms to scan 2 urls, producing 6 keys and 10 values 
-16:31:37.569 [Test worker] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
-16:31:37.569 [Test worker] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
-16:31:37.570 [Test worker] DEBUG org.example.ReflectionTest - beans: [class org.example.controller.HomeController, class org.example.controller.HealthCheckController, class org.example.controller.HomeService]
+  <testcase name="loadTest()" classname="org.example.ReflectionTest" time="0.015"/>
+  <system-out><![CDATA[16:50:16.136 [Test worker] DEBUG org.example.ReflectionTest - clazz1: class org.example.model.User
+16:50:16.139 [Test worker] DEBUG org.example.ReflectionTest - clazz2: class org.example.model.User
+16:50:16.139 [Test worker] DEBUG org.example.ReflectionTest - clazz3: class org.example.model.User
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
