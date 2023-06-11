@@ -1,9 +1,11 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.Controller;
+import org.example.mvc.controller.RequestMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +28,9 @@ public class DispatcherServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("DispatcherServlet#service started");
-        Controller handler = rmhm.findHandler(request.getRequestURI());
+        Controller handler = rmhm.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));
+
+        String viewName = handler.handleRequest(request,response);
 
         try {
             String viewName = handler.handleRequest(request,response);
@@ -34,8 +38,6 @@ public class DispatcherServlet extends HttpServlet {
             log.error("exception occurred: [{}]", e.getMessage(), e);
 
         }
-
-
     }
 
 
