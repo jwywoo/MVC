@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc2f8182-6555-41e0-90b9-cc3ddbde76a9" name="Changes" comment="" />
+    <list default="true" id="fc2f8182-6555-41e0-90b9-cc3ddbde76a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
