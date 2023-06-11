@@ -20,12 +20,12 @@ public class DispatcherServlet extends HttpServlet {
     private RequestMappingHandlerMapping rmhm;
 
     public void init() throws ServletException {
+        RequestMappingHandlerMapping rmhm = new RequestMappingHandlerMapping();
         rmhm.init();
     }
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("DispatcherServlet#service started");
-
         Controller handler = rmhm.findHandler(request.getRequestURI());
 
         try {
